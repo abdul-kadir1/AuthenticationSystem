@@ -35,9 +35,9 @@ app.use('/api/auth',authRouter)
 app.use('/api/user',userRouter) 
 
 
-app.use(express.static(path.join(_dirname,"/Client/dist")))
+app.use(express.static(path.join(__dirname,"..","/Client/dist")))
 app.get(/.*/,(req,res)=>{
-  res.sendFile(path.resolve(__dirname,"Client","dist","index.html"));
+  res.sendFile(path.resolve(__dirname,"..", "Client","dist","index.html"));
 }) 
 
 
